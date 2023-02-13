@@ -2,6 +2,7 @@
   "name": "chatgpt-api-single",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "dev": "tsx src/index.ts",
     "postbuild": "npx prisma generate",

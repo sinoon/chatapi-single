@@ -5,9 +5,11 @@
     "strict": true,
     "module": "nodenext",
     "skipLibCheck": true,
+    "moduleResolution": "node",
     "lib": [
       "ES2020"
     ],
     "esModuleInterop": true
-  }
+  },
+  "include": ["src/**/*"],
 }
