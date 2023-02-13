@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 // @ts-ignore
-import { ChatGPTAPIBrowser, SendMessageOptions } from "chatgpt";
+import { ChatGPTAPIBrowser, SendMessageOptions } from "chatgpt-dev";
 import { loadConfig } from "./lib";
 import express from "express";
 import AsyncRetry from "async-retry";
@@ -137,11 +137,12 @@ app.delete(`/message/:sessionId`, async (req, res) => {
   }
 });
 async function main() {
-  // @ts-ignore
   const { ChatGPTAPIBrowser } = await import("chatgpt-dev");
+
   console.log(
     `Starting chatgpt with config: ${JSON.stringify(config, null, 2)}`
   );
+
   const PORT = process.env.PORT || 4000;
   chatGPTAPIBrowser = new ChatGPTAPIBrowser(config);
   await AsyncRetry(
