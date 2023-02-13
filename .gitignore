@@ -145,3 +145,5 @@ dist
 n
 data/*
 fly.toml
+
+.idea
