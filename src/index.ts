@@ -138,7 +138,7 @@ app.delete(`/message/:sessionId`, async (req, res) => {
 });
 async function main() {
   // @ts-ignore
-  const { ChatGPTAPIBrowser } = await import("chatgpt");
+  const { ChatGPTAPIBrowser } = await import("chatgpt-dev");
   console.log(
     `Starting chatgpt with config: ${JSON.stringify(config, null, 2)}`
   );
