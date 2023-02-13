@@ -146,7 +146,9 @@ async function main() {
   chatGPTAPIBrowser = new ChatGPTAPIBrowser(config);
   await AsyncRetry(
     async () => {
-      await chatGPTAPIBrowser.initSession();
+      await chatGPTAPIBrowser.initSession({
+        headless: true,
+      });
     },
     {
       retries: 5,
